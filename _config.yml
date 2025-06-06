@@ -1,2 +1,14 @@
-132456
-theme: minima
+# Site settings
+title: My Jekyll Blog
+email: your-email@example.com
+description: A personal blog built with Jekyll.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://yourname.github.io" # the base hostname & protocol for your site
+
+# Theme settings
+theme: jekyll-theme-minimal
+
+# Author information
+author:
+  name: Your Name
+  bio: A short biography about yourself.
