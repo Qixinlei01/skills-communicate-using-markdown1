@@ -1,8 +1,18 @@
-name: Reusable Workflow
+name: My Starter Workflow
 
 on:
-  workflow_call:
-    inputs:
-      node:
-        required: true
-        type: string
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+  call-reusable-workflow:
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      node: '14'
