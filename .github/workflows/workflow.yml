@@ -1,0 +1,15 @@
+name: My Starter Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  call-reusable-workflow:
+    strategy:
+      matrix:
+        nodeversion: [14, 16, 18, 20]
+    uses: ./.github/workflows/reusable-workflow.yml
+    with:
+      node: ${{ matrix.nodeversion }}
